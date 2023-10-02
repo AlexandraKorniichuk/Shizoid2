@@ -9,7 +9,7 @@
 #include "GameFramework/Controller.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "InputActionValue.h"
+#include "AbilitySystemComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 

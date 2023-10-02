@@ -6,6 +6,6 @@
 /NAME:"UnrealEditor-RiderLC.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLC\Module.RiderLC.cpp.obj"
-"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLC\Default.rc2.res"
-/OUT:"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLC\UnrealEditor-RiderLC.lib"
+"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLC\Module.RiderLC.cpp.obj"
+"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLC\Default.rc2.res"
+/OUT:"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLC\UnrealEditor-RiderLC.lib"
