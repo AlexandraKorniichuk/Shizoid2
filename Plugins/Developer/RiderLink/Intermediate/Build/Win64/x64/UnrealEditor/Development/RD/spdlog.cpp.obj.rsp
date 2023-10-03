@@ -1,8 +1,8 @@
-"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src\spdlog.cpp"
-/FI"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.obj"
-/sourceDependencies "D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.dep.json"
-@"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\src\spdlog.cpp"
+/FI"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.obj"
+/sourceDependencies "C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\spdlog.cpp.dep.json"
+@"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
