@@ -1,8 +1,8 @@
-"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\wire\PkgInputStream.cpp"
-/FI"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
-/Fo"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\PkgInputStream.cpp.obj"
-/sourceDependencies "D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\PkgInputStream.cpp.dep.json"
-@"D:\Shizoid2\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
+"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\wire\PkgInputStream.cpp"
+/FI"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\Definitions.h"
+/Fo"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\PkgInputStream.cpp.obj"
+/sourceDependencies "C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\PkgInputStream.cpp.dep.json"
+@"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\RD.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
