@@ -1,8 +1,8 @@
-"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp"
-/FI"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Definitions.h"
-/Fo"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp.obj"
-/sourceDependencies "C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp.dep.json"
-@"C:\Users\Alexandra\Documents\GitHub\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\RiderLink.Shared.rsp"
+"D:\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp"
+/FI"D:\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Definitions.h"
+/Fo"D:\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp.obj"
+/sourceDependencies "D:\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp.dep.json"
+@"D:\Shizoid2\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\RiderLink.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
