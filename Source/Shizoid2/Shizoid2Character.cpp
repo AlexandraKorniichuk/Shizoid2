@@ -52,6 +52,7 @@ AShizoid2Character::AShizoid2Character()
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	HealthManagerComponent = CreateDefaultSubobject<UHealthManagerComponent>(TEXT("HealthManagerComponent"));
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
@@ -72,15 +73,10 @@ void AShizoid2Character::BeginPlay()
 	}
 }
 
-//////////////////////////////////////////////////////////////////////////
-// Input
-
 void AShizoid2Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
 		
-		// Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
@@ -135,9 +131,4 @@ void AShizoid2Character::Look(const FInputActionValue& Value)
 void AShizoid2Character::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-
-	if(AbilitySystemComponent)
-	{
-		AbilitySystemComponent->AddSet<UHealthAttributeSet>();
-	}
 }

@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemComponent.h"
+#include "HealthManagerComponent.h"
+#include "IHealthHaving.h"
 #include "Logging/LogMacros.h"
 #include "Shizoid2Character.generated.h"
 
@@ -17,7 +19,7 @@ struct FInputActionValue;
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config=Game)
-class AShizoid2Character : public ACharacter
+class AShizoid2Character : public ACharacter, public IIHealthHaving
 {
 	GENERATED_BODY()
 
@@ -29,8 +31,6 @@ class AShizoid2Character : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCamera;
 
-	UPROPERTY(EditAnywhere, Category="GAS")
-	UAbilitySystemComponent* AbilitySystemComponent;
 	
 	/** MappingContext */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
@@ -62,6 +62,12 @@ protected:
 	void Look(const FInputActionValue& Value);
 
 	virtual void PostInitializeComponents() override;
+
+	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
+	UAbilitySystemComponent* AbilitySystemComponent;
+
+	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
+	UHealthManagerComponent* HealthManagerComponent;
 			
 
 protected:
