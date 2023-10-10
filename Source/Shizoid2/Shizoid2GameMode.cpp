@@ -2,6 +2,7 @@
 
 #include "Shizoid2GameMode.h"
 #include "Shizoid2Character.h"
+#include "ShizoidController.h"
 #include "UObject/ConstructorHelpers.h"
 
 AShizoid2GameMode::AShizoid2GameMode()

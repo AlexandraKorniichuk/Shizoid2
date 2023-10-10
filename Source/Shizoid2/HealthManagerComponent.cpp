@@ -11,15 +11,14 @@ void UHealthManagerComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//AddHealthEffect(HealthInitEffect);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Health Initialized"));
+	AddHealthEffect(HealthInitEffect);
 }
 
 void UHealthManagerComponent::MakeHealthChangedNotify(UAbilitySystemComponent* Component, const FGameplayEffectSpec& Spec, FActiveGameplayEffectHandle Handle)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Event received"));
 	if(HealthChangedDelegate.IsBound())
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Event called"));
 		HealthChangedDelegate.Broadcast(AbilitySystemComponent->GetSet<UHealthAttributeSet>()->GetHealth());
 	}
 }
@@ -38,16 +37,6 @@ void UHealthManagerComponent::OnComponentCreated()
 	}
 }
 
-void UHealthManagerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	if(WasHealthInitialized==false)
-	{
-		AddHealthEffect(HealthInitEffect);
-		WasHealthInitialized = true;
-	}
-}
 
 void UHealthManagerComponent::AddHealthEffect(TSubclassOf<UGameplayEffect> Effect)
 {

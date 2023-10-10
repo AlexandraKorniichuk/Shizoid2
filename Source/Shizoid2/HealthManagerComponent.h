@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AbilitySystemComponent.h"
+#include "HealthAttributeSet.h"
 #include "Components/ActorComponent.h"
 #include "HealthManagerComponent.generated.h"
 
@@ -35,15 +36,17 @@ private:
 	void OnComponentCreated() override;
 	
 public:
-	
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable)
 	void AddHealthEffect(TSubclassOf<UGameplayEffect> Effect);
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetMaxHealth() { return AbilitySystemComponent->GetSet<UHealthAttributeSet>()->GetMaxHealth(); }
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	float GetCurrentHealth() { return AbilitySystemComponent->GetSet<UHealthAttributeSet>()->GetHealth(); }
+
 private:
 
 	UAbilitySystemComponent* AbilitySystemComponent;
-
-	bool WasHealthInitialized = false;
 };

@@ -66,8 +66,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
 	UAbilitySystemComponent* AbilitySystemComponent;
 
-	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
-	UHealthManagerComponent* HealthManagerComponent;
+	
 			
 
 protected:
@@ -82,5 +81,8 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
+	UHealthManagerComponent* HealthManagerComponent;
 };
 
