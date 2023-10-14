@@ -33,7 +33,7 @@ private:
 
 	void MakeHealthChangedNotify(UAbilitySystemComponent* Component, const FGameplayEffectSpec& Spec, FActiveGameplayEffectHandle Handle);
 
-	void OnComponentCreated() override;
+	virtual void OnComponentCreated() override;
 	
 public:
 
