@@ -29,6 +29,22 @@
 		{
 			"Name": "DidItHit",
 			"Enabled": true
+		},
+		{
+			"Name": "AbilitySystemGameFeatureActions",
+			"Enabled": true
+		},
+		{
+			"Name": "ModularGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "GameFeatures",
+			"Enabled": true
+		},
+		{
+			"Name": "Abilities",
+			"Enabled": true
 		}
 	]
 }
