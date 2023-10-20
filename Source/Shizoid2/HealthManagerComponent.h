@@ -9,6 +9,7 @@
 #include "HealthManagerComponent.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FHealthChangedDelegate, float, CurrentHP);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnZeroHealthDelegate);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SHIZOID2_API UHealthManagerComponent : public UActorComponent
@@ -24,6 +25,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category="Events", BlueprintAssignable)
 	FHealthChangedDelegate HealthChangedDelegate;
+
+	UPROPERTY(BlueprintReadWrite, Category="Events", BlueprintAssignable)
+	FOnZeroHealthDelegate OnZeroHealth;
 
 protected:
 	

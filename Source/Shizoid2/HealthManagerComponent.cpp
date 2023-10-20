@@ -17,9 +17,16 @@ void UHealthManagerComponent::BeginPlay()
 
 void UHealthManagerComponent::MakeHealthChangedNotify(UAbilitySystemComponent* Component, const FGameplayEffectSpec& Spec, FActiveGameplayEffectHandle Handle)
 {
+	float CurrentHealth = AbilitySystemComponent->GetSet<UHealthAttributeSet>()->GetHealth();
+	
+	if(CurrentHealth <=0 && OnZeroHealth.IsBound())
+	{
+		OnZeroHealth.Broadcast();
+	}
+	
 	if(HealthChangedDelegate.IsBound())
 	{
-		HealthChangedDelegate.Broadcast(AbilitySystemComponent->GetSet<UHealthAttributeSet>()->GetHealth());
+		HealthChangedDelegate.Broadcast(CurrentHealth);
 	}
 }
 
