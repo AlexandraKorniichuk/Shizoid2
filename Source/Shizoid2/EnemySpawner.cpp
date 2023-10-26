@@ -26,24 +26,23 @@ void AEnemySpawner::BeginSpawn()
 
 void AEnemySpawner::SpawnWave(FEnemyWave Wave)
 {
-	for (int i = 0; i<Wave.EnemyGroups.Num(); i++)
+	for(const auto EnemyGroup : Wave.EnemyGroups)
 	{
-		SpawnEnemiesGroup(Wave.EnemyGroups[i]);
+		SpawnEnemiesGroup(EnemyGroup);
 	}
 }
 
-void AEnemySpawner::SpawnEnemiesGroup(FEnemyGroupData Wave)
+void AEnemySpawner::SpawnEnemiesGroup(FEnemyGroupData Group)
 {
-	for(int i = 0; i<Wave.EnemiesAmount; i++)
+	for(int i = 0; i < Group.EnemiesAmount; i++)
 	{
 		FActorSpawnParameters SpawnInfo;
-		AEnemy* Enemy = World->SpawnActor<AEnemy>(Wave.EnemiesType, GetActorTransform(), SpawnInfo);
+		AEnemy* Enemy = World->SpawnActor<AEnemy>(Group.EnemiesType, GetActorTransform(), SpawnInfo);
 		if(Enemy)
 		{
 			Enemy->HealthManagerComponent->OnZeroHealth.AddDynamic(this, &AEnemySpawner::ProceedEnemyDeath);
 			EnemiesLeftInCurrentWave++;
 		}
-		
 	}
 }
 
@@ -61,6 +60,5 @@ void AEnemySpawner::ProceedEnemyDeath()
 void AEnemySpawner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 

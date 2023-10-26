@@ -25,7 +25,6 @@ struct FEnemyWave
 	GENERATED_BODY()
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-
 	TArray<FEnemyGroupData> EnemyGroups;
 };
 
@@ -47,7 +46,7 @@ protected:
 	void SpawnWave(FEnemyWave Wave);
 
 	UFUNCTION(BlueprintCallable)
-	void SpawnEnemiesGroup(FEnemyGroupData Wave);
+	void SpawnEnemiesGroup(FEnemyGroupData Group);
 
 	UFUNCTION(BlueprintCallable)
 	void BeginSpawn();
