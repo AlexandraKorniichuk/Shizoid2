@@ -7,6 +7,7 @@
 #include "AbilitySystemComponent.h"
 #include "HealthManagerComponent.h"
 #include "IHealthHaving.h"
+#include "WeaponInventoryComponent.h"
 #include "Logging/LogMacros.h"
 #include "Shizoid2Character.generated.h"
 
@@ -63,17 +64,14 @@ protected:
 
 	virtual void PostInitializeComponents() override;
 
-	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, Category="Components", BlueprintReadWrite)
 	UAbilitySystemComponent* AbilitySystemComponent;
 
+	UPROPERTY(EditAnywhere, Category="Components", BlueprintReadWrite)
+	UWeaponInventoryComponent* WeaponInventoryComponent;
 	
-			
-
-protected:
-	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
-	// To add mapping context
 	virtual void BeginPlay();
 
 public:
