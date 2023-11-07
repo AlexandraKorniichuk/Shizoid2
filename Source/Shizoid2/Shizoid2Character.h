@@ -82,5 +82,8 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
 	UHealthManagerComponent* HealthManagerComponent;
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	UStaticMeshComponent* SpawnWeaponMesh(UStaticMesh* MeshInComponent);
 };
 
