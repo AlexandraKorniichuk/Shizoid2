@@ -74,6 +74,11 @@ void AShizoid2Character::BeginPlay()
 	}
 }
 
+UStaticMeshComponent* AShizoid2Character::SpawnWeaponMesh_Implementation(UStaticMesh* MeshInComponent)
+{
+	return FindComponentByClass<UStaticMeshComponent>();
+}
+
 void AShizoid2Character::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {

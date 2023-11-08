@@ -34,8 +34,6 @@ void UHealthManagerComponent::OnComponentCreated()
 {
 	Super::OnComponentCreated();
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("OnComponentCreated!"));
-
 	AbilitySystemComponent = GetOwner()->FindComponentByClass<UAbilitySystemComponent>();
 	
 	if(AbilitySystemComponent)

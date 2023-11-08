@@ -8,6 +8,7 @@
 #include "Components/ActorComponent.h"
 #include "WeaponInventoryComponent.generated.h"
 
+class AShizoid2Character;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), Blueprintable )
 class SHIZOID2_API UWeaponInventoryComponent : public UActorComponent
@@ -32,6 +33,9 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<TSubclassOf<AWeapon>> Weapons;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSubclassOf<UGameplayEffect> TestEffect;
 	
 	UFUNCTION(BlueprintCallable)
 	void InitWeapons();
@@ -39,9 +43,11 @@ protected:
 private:
 	virtual void OnComponentCreated() override;
 
-	AWeapon* CurrentWeapon;
+	TSubclassOf<AWeapon> CurrentWeapon;
 
-	UAbilitySystemComponent* AbilitySystemComponent; 
+	AShizoid2Character* Owner;
+	
+	UAbilitySystemComponent* AbilitySystemComponent;
 
 	TArray<UStaticMeshComponent*> WeaponsMeshes;
 
