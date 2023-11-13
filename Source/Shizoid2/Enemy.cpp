@@ -14,12 +14,15 @@ AEnemy::AEnemy()
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	HealthManagerComponent = CreateDefaultSubobject<UHealthManagerComponent>(TEXT("HealthManagerComponent"));
 }
-
 // Called when the game starts or when spawned
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
+
+	HealthManagerComponent->OnZeroHealth.AddDynamic(this, &AEnemy::GetKilled);
 }
+
+
 
 // Called every frame
 void AEnemy::Tick(float DeltaTime)

@@ -21,6 +21,8 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
+	
 
 public:	
 	// Called every frame
@@ -33,4 +35,6 @@ public:
 	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
 	UAbilitySystemComponent* AbilitySystemComponent;
 
+private:
+	void GetKilled();
 };
