@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Enemy.h"
+#include "EnemySpawnPoint.h"
 #include "GameFramework/Actor.h"
 #include "EnemySpawner.generated.h"
 
@@ -67,6 +68,12 @@ private:
 
 	int EnemiesLeftInCurrentWave = 0;
 	int CurrentWave = 0;
+
+	TArray<AEnemySpawnPoint*> SpawnPoints;
+
+	void InitializeSpawnPoints();
+
+	AEnemySpawnPoint* SelectRandomSpawnPoint();
 
 };
 

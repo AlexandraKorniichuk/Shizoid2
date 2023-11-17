@@ -3,6 +3,9 @@
 
 #include "EnemySpawner.h"
 
+#include "EngineUtils.h"
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values
 AEnemySpawner::AEnemySpawner()
 {
@@ -16,6 +19,7 @@ void AEnemySpawner::BeginPlay()
 {
 	Super::BeginPlay();
 	World = GetWorld();
+	InitializeSpawnPoints();
 	BeginSpawn();
 }
 
@@ -37,7 +41,7 @@ void AEnemySpawner::SpawnEnemiesGroup(FEnemyGroupData Group)
 	for(int i = 0; i < Group.EnemiesAmount; i++)
 	{
 		FActorSpawnParameters SpawnInfo;
-		AEnemy* Enemy = World->SpawnActor<AEnemy>(Group.EnemiesType, GetActorTransform(), SpawnInfo);
+		AEnemy* Enemy = World->SpawnActor<AEnemy>(Group.EnemiesType, SelectRandomSpawnPoint()->GetActorTransform(), SpawnInfo);
 		if(Enemy)
 		{
 			Enemy->HealthManagerComponent->OnZeroHealth.AddDynamic(this, &AEnemySpawner::ProceedEnemyDeath);
@@ -60,5 +64,22 @@ void AEnemySpawner::ProceedEnemyDeath()
 void AEnemySpawner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+void AEnemySpawner::InitializeSpawnPoints()
+{
+	for(TActorIterator<AEnemySpawnPoint> Iterator(World); Iterator; ++Iterator)
+	{
+		SpawnPoints.Add(*Iterator);
+	}
+}
+
+AEnemySpawnPoint* AEnemySpawner::SelectRandomSpawnPoint()
+{
+	if(SpawnPoints.Num()==0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("There are zero enemy spawn points on the level."));
+	}
+	return SpawnPoints[FMath::RandRange(0, SpawnPoints.Num()-1)];
 }
 
