@@ -34,7 +34,5 @@ public:
 
 	UPROPERTY(EditAnywhere, Category="GAS", BlueprintReadWrite)
 	UAbilitySystemComponent* AbilitySystemComponent;
-
-private:
-	void GetKilled();
+	
 };

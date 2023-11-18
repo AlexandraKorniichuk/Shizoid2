@@ -18,8 +18,7 @@ AEnemy::AEnemy()
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-
-	HealthManagerComponent->OnZeroHealth.AddDynamic(this, &AEnemy::GetKilled);
+	
 }
 
 
