@@ -1,0 +1,4 @@
+Irene_FaceMesh.uasset filter=lfs diff=lfs merge=lfs -text
+Hana_FaceMesh.uasset filter=lfs diff=lfs merge=lfs -text
+Gace_Archetype.uasset filter=lfs diff=lfs merge=lfs -text
+Face_Archetype.uasset filter=lfs diff=lfs merge=lfs -text
