@@ -17,7 +17,7 @@ struct FEnemyGroupData
 	TSubclassOf<AEnemy> EnemiesType;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int EnemiesAmount;
+    int EnemiesAmount = 0;
 };
 
 USTRUCT(Blueprintable)
