@@ -1,4 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=45198371_002D2A80_002D3A37_002D9675_002D4E77D2A5B256_002Fdl_003ASource_003A_002E_002E_003F_002E_002E_003FSource_002Fd_003AShizoid2_002Ff_003AEnemySpawner_002Ecpp/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=45198371_002D2A80_002D3A37_002D9675_002D4E77D2A5B256_002Fdl_003ASource_003A_002E_002E_003F_002E_002E_003FSource_002Fd_003AShizoid2_002Ff_003AEnemySpawner_002Eh/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=DE1F8B53_002D6C02_002D3C13_002D9101_002DA7C8D96F3FF6_002Ff_003AEnemySpawner_002Ecpp_002Fl_003ASource_003FShizoid2_003FEnemySpawner_002Ecpp/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	
