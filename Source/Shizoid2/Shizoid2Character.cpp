@@ -10,7 +10,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "AbilitySystemComponent.h"
-#include "HealthAttributeSet.h"
+#include "Health/HealthAttributeSet.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 

@@ -5,9 +5,9 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemComponent.h"
-#include "HealthManagerComponent.h"
-#include "IHealthHaving.h"
-#include "WeaponInventoryComponent.h"
+#include "Health/HealthManagerComponent.h"
+#include "Health/IHealthHaving.h"
+#include "Attack/WeaponInventoryComponent.h"
 #include "Logging/LogMacros.h"
 #include "Shizoid2Character.generated.h"
 

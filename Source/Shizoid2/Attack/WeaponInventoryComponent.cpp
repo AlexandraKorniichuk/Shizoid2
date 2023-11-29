@@ -5,7 +5,7 @@
 
 #include "AttackAttributeSet.h"
 #include "Containers/UnrealString.h"
-#include "Shizoid2Character.h"
+#include "../Shizoid2Character.h"
 
 // Sets default values for this component's properties
 UWeaponInventoryComponent::UWeaponInventoryComponent()

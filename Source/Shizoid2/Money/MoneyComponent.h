@@ -34,6 +34,11 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool CanPay(int Price) const;
 
+	UFUNCTION(BlueprintCallable, Category="Shop")
+	void Pay(int Price);
+	UFUNCTION(BlueprintCallable, Category="Shop")
+	void Add(int Value);
+
 private:
 	int Currency = 0;
 	FString StringType = "Shiziki";
@@ -43,6 +48,4 @@ private:
 
 	FString GetStringType();
 
-	void Pay(int Price);
-	void Add(int Value);
 };

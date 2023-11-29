@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "MoneyComponent.h"
 #include "GameFramework/SaveGame.h"
-#include "ShizoidGameInstance.h"
+#include "../ShizoidGameInstance.h"
 #include "MoneySaving.generated.h"
 
 /**

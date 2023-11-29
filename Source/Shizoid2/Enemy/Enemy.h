@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "HealthManagerComponent.h"
+#include "../Health/HealthManagerComponent.h"
 #include "AbilitySystemComponent.h"
-#include "IHealthHaving.h"
+#include "../Health/IHealthHaving.h"
 #include "Enemy.generated.h"
 
 UCLASS()
