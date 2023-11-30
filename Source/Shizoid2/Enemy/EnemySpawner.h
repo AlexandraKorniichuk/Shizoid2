@@ -8,6 +8,8 @@
 #include "GameFramework/Actor.h"
 #include "EnemySpawner.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FLevelCreared);
+
 USTRUCT(Blueprintable)
 struct FEnemyGroupData
 {
@@ -38,6 +40,8 @@ class SHIZOID2_API AEnemySpawner : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AEnemySpawner();
+	UPROPERTY(BlueprintReadWrite, Category="Events", BlueprintAssignable)
+	FLevelCreared OnLevelCreared;
 
 protected:
 	// Called when the game starts or when spawned

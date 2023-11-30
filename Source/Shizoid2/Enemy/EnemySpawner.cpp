@@ -55,6 +55,7 @@ void AEnemySpawner::ProceedEnemyDeath()
 	EnemiesLeftInCurrentWave--;
 	if(EnemiesLeftInCurrentWave==0)
 	{
+		OnLevelCreared.Broadcast();
 		CurrentWave++;
 		SpawnWave(EnemyWaves[CurrentWave]);
 	}
